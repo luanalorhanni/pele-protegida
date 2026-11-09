@@ -35,8 +35,8 @@ export const UBS: UbsConfig = {
   // Mesmo número do contato. Confirme se ele atende pelo WhatsApp.
   whatsapp: '(98) 98549-3678',
   whatsappLink: 'https://wa.me/5598985493678',
-  horario: 'Segunda a sexta, das 7h às 18h',
-  horarioFrase: 'de segunda a sexta, das 7h às 18h',
+  horario: 'Segunda a sábado, das 7h às 18h',
+  horarioFrase: 'de segunda a sábado, das 7h às 18h',
   comoMarcar: [
     '[Passo 1 — ex.: vá à recepção da UBS ou mande mensagem no WhatsApp]',
     '[Passo 2 — ex.: diga que quer uma consulta para olhar a pele]',

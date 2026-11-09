@@ -225,6 +225,6 @@ describe('"Não tenho certeza" sem nenhum "Sim" nas P19–P22', () => {
 describe('texto da barreira "horário"', () => {
   it('usa o horário configurado em ubs.ts', () => {
     const a = computeResult({ ...CAMINHO, p20: 'sim', p23: 'nao_procurei', p24: ['horario'] }).ubsAlert!;
-    expect(a.barriers[0].text).toMatch(/^A UBS atende de segunda a sexta, das 7h às 18h\. /);
+    expect(a.barriers[0].text).toMatch(/^A UBS atende de segunda a sábado, das 7h às 18h\. /);
   });
 });
