@@ -36,7 +36,7 @@ export function Inicio() {
       <HeroArt />
       <div className="stack stack--sm">
         <h1 ref={h1} tabIndex={-1} className="display display--hero">
-          Pele Protegida
+          Cuidar da pele também é coisa de homem
         </h1>
         <div className="accent-bar" aria-hidden="true" />
         <p className="lead">Cuide da sua pele no trabalho ao sol</p>
