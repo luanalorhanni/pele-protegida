@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Imagem de prévia (Open Graph) — Pele Protegida</title>
+<!--
+  Modelo da imagem de prévia exibida ao compartilhar o link (WhatsApp, Telegram etc.).
+  Gere de novo com: npm run og   →   public/og-image.jpg (1200×630)
+  Estilo do convite: fundo claro, ondas laranja, título em Bebas Neue com degradê amarelo → laranja.
+  O conteúdo principal fica no centro, porque alguns apps recortam a prévia em quadrado.
+-->
+<style>
+  @font-face { font-family: 'Bebas Neue'; src: url('../../node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Atkinson Hyperlegible'; font-weight: 400; src: url('../../node_modules/@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Atkinson Hyperlegible'; font-weight: 700; src: url('../../node_modules/@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-700-normal.woff2') format('woff2'); }
+
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative;
+    background: #FFFAF3;
+    color: #1E1E2E;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+  }
+  .wave { position: absolute; left: 0; width: 1200px; display: block; }
+  .wave--top { top: 0; }
+  .wave--bottom { bottom: 0; }
+  .content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    padding-bottom: 36px;
+  }
+  .icon {
+    width: 168px;
+    height: 168px;
+    border-radius: 38px;
+    box-shadow: 0 10px 28px rgb(30 30 46 / 0.18);
+    margin-bottom: 14px;
+  }
+  h1 {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 0.9;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #FFD54F 0%, #FFB347 45%, #FF9147 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* contorno leve para o amarelo não sumir no fundo claro */
+    -webkit-text-stroke: 1.5px rgb(214 120 40 / 0.35);
+  }
+  .tagline {
+    margin: 4px 0 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .sub {
+    margin: 6px 0 0;
+    font-size: 27px;
+    color: #4A4560;
+  }
+  .footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1E1E2E;
+  }
+  .footer img { height: 58px; width: auto; display: block; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #5B4E9A; }
+</style>
+</head>
+<body>
+  <svg class="wave wave--top" viewBox="0 0 1200 90" height="90" aria-hidden="true">
+    <path d="M0 0H1200V44C1080 86 980 22 840 40S600 96 440 62 160 30 0 58Z" fill="#FFBE5C"/>
+  </svg>
+  <svg class="wave wave--bottom" viewBox="0 0 1200 120" height="120" aria-hidden="true">
+    <path d="M0 120V52C140 14 300 78 470 54S760 8 920 40 1120 70 1200 46V120Z" fill="#FFBE5C"/>
+  </svg>
+
+  <div class="content">
+    <img class="icon" src="../../public/icons/icon.svg" alt="">
+    <h1>Pele Protegida</h1>
+    <p class="tagline">Cuide da sua pele no trabalho ao sol</p>
+    <p class="sub">Dicas, checklist e questionário anônimo</p>
+  </div>
+
+  <div class="footer">
+    <img src="../../public/brand/logo-ceuma.png" alt="">
+    <span>Centro de Saúde Embrião Anexo Sá Viana</span>
+    <span class="dot"></span>
+    <span>São Luís (MA)</span>
+  </div>
+</body>
+</html>

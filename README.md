@@ -127,6 +127,14 @@ Depois de um novo deploy, quem já tem o app vê **"Atualização disponível �
 Se a pessoa terminar o questionário sem internet, a resposta vai para uma fila no IndexedDB do aparelho e aparece o aviso "Sem internet agora…".
 O envio é automático quando a conexão volta ou na próxima vez que o app for aberto.
 
+## Prévia do link (WhatsApp, Telegram, redes sociais)
+
+Ao compartilhar o link, os apps mostram a imagem `public/og-image.jpg` (1200×630) com título e descrição. As tags `og:*` e `twitter:*` ficam em `index.html`.
+
+- A imagem precisa de **URL absoluta**. No build da Vercel o domínio de produção entra sozinho (variável `VERCEL_PROJECT_PRODUCTION_URL`). Se usar um domínio próprio ou outro serviço, defina `VITE_SITE_URL` (ex.: `https://pelep.exemplo.com.br`).
+- Para mudar a arte, edite `scripts/og/og.html` e rode `npm run og` (usa o Chrome instalado; defina `CHROME_PATH` se ele não for encontrado).
+- O WhatsApp guarda a prévia em cache. Depois de trocar a imagem, teste com um link novo (ex.: `https://seu-dominio/?v=2`) ou confira em [opengraph.xyz](https://www.opengraph.xyz/).
+
 ## Exportar as respostas
 
 As respostas só podem ser lidas pelo painel do Supabase ou com a service role (nunca pelo site).
