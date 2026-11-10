@@ -66,3 +66,15 @@ export const CONSENT_ITEMS: readonly { icon: IconName; t: string }[] = [
 
 export const FOOTER_TEXT =
   'Este site dá orientações de prevenção e ajuda a perceber sinais na pele que merecem atenção. Ele não faz diagnóstico e não substitui uma consulta. Em caso de dúvida, procure a UBS.';
+
+export const FOOTER_CREDITS = {
+  eixo: 'Eixo Interação Ensino Serviço Comunidade e Gestão V (IESCG V)',
+  pessoas: [
+    { papel: 'Orientador', nomes: 'Prof. Me. Fernando Bacelar' },
+    { papel: 'Preceptora', nomes: 'Dra. Ariane Sousa' },
+    {
+      papel: 'Acadêmicos',
+      nomes: 'Alexandre Lobato, José Carlos, José Ferreira, Laura Miranda, Leylane Lopes, Lívia Lorhanni',
+    },
+  ],
+};

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Answers, Question } from './content/questions';
-import { FOOTER_TEXT } from './content/screens';
+import { FOOTER_CREDITS, FOOTER_TEXT } from './content/screens';
 import { Icon } from './components/icons';
 import { computeResult } from './lib/computeResult';
 import { cleanAnswers, visibleQuestions } from './lib/conditions';
@@ -200,7 +200,28 @@ export function App() {
       </main>
 
       <footer className="footer">
-        <p className="container">{FOOTER_TEXT}</p>
+        <div className="container">
+          <div className="footer__card">
+            <img
+              className="footer__logo"
+              src="/brand/logo-ceuma.png"
+              alt="Universidade CEUMA"
+              width={109}
+              height={108}
+              loading="lazy"
+            />
+            <p className="footer__eixo">{FOOTER_CREDITS.eixo}</p>
+            <hr className="footer__divider" />
+            <dl className="footer__credits">
+              {FOOTER_CREDITS.pessoas.map((p) => (
+                <div key={p.papel}>
+                  <dt>{p.papel}:</dt> <dd>{p.nomes}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="footer__note">{FOOTER_TEXT}</p>
+          </div>
+        </div>
       </footer>
 
       <UpdateToast />
