@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Answers, Question } from './content/questions';
-import { FOOTER_CREDITS, FOOTER_TEXT } from './content/screens';
+import { FOOTER_CREDITS, FOOTER_TEXT, REFERENCIAS } from './content/screens';
 import { Icon } from './components/icons';
 import { computeResult } from './lib/computeResult';
 import { cleanAnswers, visibleQuestions } from './lib/conditions';
@@ -219,6 +219,27 @@ export function App() {
                 </div>
               ))}
             </dl>
+            <details className="footer__refs">
+              <summary>Referências bibliográficas</summary>
+              <ul>
+                {REFERENCIAS.map((r) => {
+                  const [pre, pos] = r.url ? r.depois.split(r.url) : [r.depois, ''];
+                  return (
+                    <li key={r.antes + r.destaque}>
+                      {r.antes}
+                      <strong>{r.destaque}</strong>
+                      {pre}
+                      {r.url && (
+                        <a href={r.url} target="_blank" rel="noopener noreferrer">
+                          {r.url}
+                        </a>
+                      )}
+                      {pos}
+                    </li>
+                  );
+                })}
+              </ul>
+            </details>
             <p className="footer__note">{FOOTER_TEXT}</p>
           </div>
         </div>

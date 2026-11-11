@@ -78,3 +78,63 @@ export const FOOTER_CREDITS = {
     },
   ],
 };
+
+// Referências no formato ABNT: `destaque` é o trecho em negrito (título do periódico/obra).
+export const REFERENCIAS: { antes: string; destaque: string; depois: string; url?: string }[] = [
+  {
+    antes:
+      'FACCENDA, P. H.; FREITAS, C. S.; MARCON, C. L. V. Hábitos de proteção solar de pacientes atendidos em uma unidade de saúde na Região Sul do Brasil. ',
+    destaque: 'Revista Brasileira de Medicina de Família e Comunidade',
+    depois: ', Rio de Janeiro, v. 18, n. 45, 3427, 2023.',
+  },
+  {
+    antes: 'FITZPATRICK, T. B. The validity and practicality of sun-reactive skin types I through VI. ',
+    destaque: 'Archives of Dermatology',
+    depois: ', Chicago, v. 124, n. 6, p. 869-871, 1988.',
+  },
+  {
+    antes:
+      'GOMES, K. A. N. F. et al. Políticas públicas, Estado e prevenção do câncer de pele relacionado à exposição ocupacional: uma revisão integrativa. ',
+    destaque: 'Revista Brasileira de Medicina do Trabalho',
+    depois: ', São Paulo, v. 23, n. 3, e20251477, 2025.',
+  },
+  {
+    antes: 'INSTITUTO NACIONAL DE CÂNCER (Brasil). ',
+    destaque: 'Câncer de pele não melanoma',
+    depois:
+      '. Rio de Janeiro: INCA, [2024]. Disponível em: https://www.gov.br/inca/pt-br/assuntos/cancer/tipos/pele-nao-melanoma. Acesso em: 11 nov. 2026.',
+    url: 'https://www.gov.br/inca/pt-br/assuntos/cancer/tipos/pele-nao-melanoma',
+  },
+  {
+    antes:
+      'KARLSSON, E. et al. Validation of SEPI in German: a German translation of the Sun Exposure and Protection Index. ',
+    destaque: 'International Journal of Environmental Research and Public Health',
+    depois: ', Basel, v. 17, n. 17, 6172, 2020.',
+  },
+  {
+    antes: 'KNIPPING, S. et al. Translation and validation of the Dutch version of the Sun Exposure and Protection Index. ',
+    destaque: 'Dermatology',
+    depois: ', Basel, v. 240, n. 2, p. 282-290, 2024.',
+  },
+  {
+    antes:
+      'MAGALHÃES, L. A. et al. Prevenção e diagnóstico precoce de câncer de pele: avanços, fatores de risco e estratégias futuras. ',
+    destaque: 'Brazilian Journal of Health Review',
+    depois: ', Curitiba, v. 7, n. 5, p. 1-9, 2024.',
+  },
+  {
+    antes: 'SCHALKA, S. et al. Consenso Brasileiro de Fotoproteção. ',
+    destaque: 'Anais Brasileiros de Dermatologia',
+    depois: ', Rio de Janeiro, v. 89, n. 6, supl. 1, p. 1-74, 2014.',
+  },
+  {
+    antes: 'WORLD HEALTH ORGANIZATION. ',
+    destaque: 'Global solar UV index',
+    depois: ': a practical guide. Geneva: WHO, 2002.',
+  },
+  {
+    antes: 'WORLD HEALTH ORGANIZATION. ',
+    destaque: 'Guide to cancer early diagnosis',
+    depois: '. Geneva: WHO, 2017.',
+  },
+];
